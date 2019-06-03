@@ -3,6 +3,14 @@ function takeANumber (line, name) {
   return "Welcome, " + name + ". You are number " + line.length + " in line.";
 }
 
+var served = 0
+
+function takeANumber (line) {
+  served++;
+  line.push(served);
+  return "Welcome, you have ticket number "+ served +"."
+}
+
 function nowServing (line) {
   if (line.length === 0) {
     return "There is nobody waiting to be served!";
